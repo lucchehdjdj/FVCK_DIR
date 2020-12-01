@@ -81,9 +81,9 @@ print(fVermelho + """
           `V.:M.. M. :M.V' 
 """)
 sleep(2)
-print(tBranco + "Paciência.. estamos varrendo os diretórios do site.")
+print(white + "Paciência.. estamos varrendo os diretórios do site.")
 sleep(2)
-print(tAmarelo + "..aceita um café?")
+print(tCiano + "..aceita um café?")
 print(" ")
 sleep(4)
 def timeout():
@@ -102,8 +102,10 @@ while times != len(words):
                         }
         )
         if req.status_code == 200:
-            print(tVerde + ('{} --> este diretório existe.'.format(args.url + '{}'.format(words[times]))))
+            print(tVerde + ('{} --> este diretório existe. (CODE: 200)'.format(args.url + '{}'.format(words[times]))))
         times += 1
+        if req.status_code == 403:
+            print(tAmarelo + ('{} --> sem permissão. (CODE: 403)'.format(args.url + '{}'.format(words[times]))))
         timeout()
     except KeyboardInterrupt:
         break
