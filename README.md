@@ -11,4 +11,4 @@ pip3 install -r requirements.txt
 
 python3 FVCK_DIR.py
 
-![print para os leigos](https://i.imgur.com/uXxH0vg.png)
+![print para os leigos](https://i.imgur.com/59RzqPg.png)
